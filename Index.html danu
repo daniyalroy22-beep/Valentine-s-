@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 120px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      height: 100vh;
+      overflow: hidden;
+    }
+    h1 {
+      color: #b3003b;
+    }
+    button {
+      padding: 12px 28px;
+      font-size: 18px;
+      margin: 10px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+    }
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+    #no {
+      position: absolute;
+      background: white;
+      color: #ff4d6d;
+      border: 2px solid #ff4d6d;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Will you be my Valentine? 💖</h1>
+  <button id="yes">YES 💘</button>
+  <button id="no">NO 😜</button>
+
+  <script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+
+    noBtn.addEventListener("mouseover", () => {
+      noBtn.style.left = Math.random() * (window.innerWidth - 100) + "px";
+      noBtn.style.top = Math.random() * (window.innerHeight - 50) + "px";
+    });
+
+    yesBtn.addEventListener("click", () => {
+      document.body.innerHTML = `
+        <h1>YAY!!! 💖</h1>
+        <h2>You just made me the happiest 😘</h2>
+        <p>I love you ❤️</p>
+      `;
+    });
+  </script>
+
+</body>
+</html>
